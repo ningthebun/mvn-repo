@@ -1,0 +1,310 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+:root {
+	--main: #FF8E2E;
+	--main50: #FF8E2E80;
+	
+	--accent: #FFBB2E;
+	--accent80: #FFBB2ECC;
+	--accent70: #FFBB2EB3;
+	--accent50: #FFBB2E80;
+	--accent20: #FFBB2E33;
+	
+	--form: #FFD57E;
+	--form50: #FFD57E80;
+	--form20: #FFD57E33; /* in use */
+	
+	--drop: #FF8E2E;
+	
+	--text: #333;
+	
+	--error: #FF6161;
+	--error70: #FF6161B3;
+	
+	--successBg: #E2F9B4;
+	--successBg80: #E2F9B4CC;
+	--success: #80B417;
+	--success20: #80B41733;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+    background: /* #FF8E2E */var(--main);
+    padding: 0 10%;
+    border-bottom: /* #FFBB2E */var(--accent) 10px solid;
+}
+
+header img {
+    max-height: 80px;
+    float: left;
+    margin: 10px 0;
+}
+
+/* LISTS */
+ul {
+    text-align: left;
+    list-style: none;
+    margin-bottom: 2em;
+}
+
+li {margin: 1em;}
+
+
+header nav {
+    text-align: right;
+    position:relative;
+    top: 40px;
+}
+
+nav a {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    opacity: 80%;
+}
+
+@media only screen and (max-width: 600px) { 
+	nav a {
+	display: block;
+	}
+	
+	footer nav a {
+	margin-left: 0;
+	}
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.logoutNav {
+	display: inline-block;
+	margin-left: 1em;
+	/* width: 70px; */
+}
+
+.headerBtn {
+	/* width: 70px; */
+	margin: 0;
+	padding: 0;
+}
+
+.logoutNav button:hover {
+	background: var(--main);
+}
+
+/* MAIN */
+main {
+    background: #fff;
+    color: var(--text);
+    text-align: center;
+}
+
+/* YELLOW LINE + BACKGROUND */
+main a {
+	color: var(--text);
+	text-decoration: none;
+    transition: all 0.5s ease-out;
+    box-shadow: inset 0 -4px 0 0 var(--accent70);
+}
+
+main a:hover {
+	color: var(--text);
+	box-shadow: inset 0 -50px 0 0 var(--accent70);
+}
+
+section {
+    padding: 20px 10% 40px;
+}
+
+/* HEADINGS & TEXT */
+h1, h2, h3 {
+    font-family: 'Mochiy Pop P One', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.6em;
+    margin: 30px 0;
+}
+
+h2 {
+	font-size: 1.4em;
+    margin: 20px 0;
+}
+
+h3 {
+	font-size: 1em;
+	font-weight: normal;
+    margin: 10px 0;
+}
+
+p {
+    margin: 1em 0;
+    line-height: 1.6em;
+}
+
+.highlighted {
+    background: var(--form20);
+    width: 70%;
+    max-width: 800px;
+    padding: 20px 2%;
+    margin: 0 auto;
+	border-radius: 2px;
+}
+
+@media only screen and (max-width: 880px) { 
+    .highlighted {
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 550px) { 
+    .highlighted {
+        width: 90%;
+    }
+}
+
+.col2 {
+    display: inline-block;
+    width: 45%;
+    padding: 2%;
+    vertical-align: top;
+}
+
+@media only screen and (max-width: 600px) {
+    .col2 {
+        width: 90%;
+        padding: 0;
+    }
+
+    .col2_2 {
+        margin-top: 2%;
+    }
+    
+    .col3 {
+    	width: 90%;
+    }
+}
+
+/* BUTTON */
+button {
+	background: var(--main);
+	padding: 12px;
+	border: 0;
+	color: #fff;
+	margin: 20px 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 2px;
+    transition: 0.5s ease-in-out;
+}
+
+button:hover {
+    background: var(--accent);
+    cursor: pointer;
+}
+
+form {
+    padding: 0;
+    text-align: center;
+}
+
+form label {
+    padding: 10px 4.5%;
+    /* font-weight: bold; */
+    display: inline-block;
+    width: 40%;
+    text-align: left;
+    vertical-align: top;
+}
+
+form img {
+	float: left;
+}
+
+/* error from DB validation */
+.error { 
+	padding: 0;
+    margin: 10px 0;
+    color: var(--error);
+}
+
+form input {
+    padding: 10px 2.5%;
+    margin-top: 10px;
+    width: 94%;
+}
+
+@media only screen and (max-width: 600px) {
+    form label {
+        width: 90%;
+    }
+}
+
+label span {
+    font-size: 0.8em;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+
+/* FOOTER */
+footer {
+    border-top: #FFBB2E 10px solid;
+    background: #FF8E2E;
+    padding: 20px 10%;
+    color: #fff;
+    margin: 40px 0 0;
+}
+
+footer .col2 {
+    text-align: left;
+    padding: 10px 0;
+}
+
+footer .col2_2 {
+    text-align: right;
+}
+
+footer nav a {
+	margin-left: 0;
+}
+
+footer li {
+	margin: 0 0 1em 0;
+}
+
+.logoutFooter {
+	text-align: left;
+}
+
+.logoutFooter button {
+	margin: 0 0 1em 0;
+	padding: 0;
+	background: rgba(0,0,0,0);
+}
+
+.logoutFooter button:hover {
+	color: rgba(255, 255, 255, 0.8);
+	background: rgba(0,0,0,0);
+}
